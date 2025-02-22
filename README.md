@@ -34,18 +34,23 @@ Static routing is the fundamental approach to network routing, where routes are 
 ![Network Topology](static%20routing/image.png)
 
 ### 2. Dynamic Routing
-- **Objective**: Implement dynamic routing protocols to ensure end-to-end connectivity.
-- **Protocols Covered**:
-  - **RIP v2**: Distance-vector routing protocol with hop count as metric.
-  - **OSPF**: Link-state routing protocol using Dijkstra’s algorithm.
-  - **BGP**: Border Gateway Protocol for inter-AS routing.
-- **Configuration Steps**:
-  - Enable RIP v2, OSPF, and BGP on respective routers.
-  - Define network statements and establish neighbor relationships.
-  - Configure route redistribution for cross-protocol communication.
-- **Verification**:
-  - Check routing tables (`show ip route`), Wireshark packet captures.
-  - Test connectivity using `ping` and `traceroute`.
+Dynamic routing is a scalable approach that allows routers to automatically learn and share routes through routing protocols. This lab involves configuring a multi-router network using RIP v2, OSPF, and BGP, along with NAT implementation.
+- **Objective:** Establish full connectivity between Virtual PCs (VPCs) and multiple Internet Service Providers (ISPs) by implementing dynamic routing protocols and NAT
+- **Protocols Used:**
+  - **RIP v2** – Configured on routers in the left section of the topology, exchanging routing information using multicast (224.0.0.9)
+  - **OSPF** – Configured on routers in the right section, ensuring optimized path selection using Dijkstra’s algorithm
+  - **BGP** – Used to interconnect different Autonomous Systems (AS) by redistributing RIP and OSPF routes between ISPs
+- **Key Features:**
+  - Configuring RIP v2 with network statements and enabling version 2
+  - Implementing OSPF with appropriate area assignments using router ospf commands
+  - Setting up BGP peer relationships and redistributing RIP and OSPF routes
+  - Deploying NAT to enable private-to-public IP translation
+- **Verification:**
+  - Analyzing routing tables with show ip route and comparing results to Dijkstra’s algorithm calculations
+  - Using Wireshark to capture RIP v2 and OSPF packets exchanged between routers
+  - Testing connectivity between hosts with ping and traceroute
+ 
+   ![Network Topology](dynamic%20routing/image.png)
 
 ### 3. NAT (Network Address Translation)
 - **Objective**: Enable private-to-public IP translation for network access.

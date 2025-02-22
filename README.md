@@ -69,12 +69,17 @@ Network Address Translation (NAT) allows multiple devices in a private network t
     ![Network Topology](nat/image.png)
 
 ### 4. VLAN (Virtual Local Area Network)
-- **Objective**: Implement VLANs for network segmentation and isolation.
-- **Configuration Steps**:
-  - Create VLANs and assign ports to VLANs.
-  - Configure trunking between switches (`switchport mode trunk`).
-  - Enable inter-VLAN routing using a Layer 3 switch or router-on-a-stick.
-- **Verification**:
-  - Check VLAN assignment (`show vlan brief`).
-  - Test communication between VLANs.
-
+VLANs are used to segment networks logically, improving security, efficiency, and traffic management. This lab focuses on VLAN creation, VLAN tagging, and inter-VLAN communication using both Layer 2 and Layer 3 devices.
+- **Objective:** Implement VLAN segmentation and enable communication between VLANs using an L3 switch and a router.
+- **Topology:**
+  - **Left section:** VLANs configured on an L3 switch (ESW1), acting as the primary segmentation device
+  - **Right section:** VLANs created on L2 switches, relying on a router for inter-VLAN communication
+  - Trunking established between switches and routers to facilitate VLAN tagging
+- **Key Features:**
+  - VLAN creation and assignment to interfaces on both L2 and L3 switches
+  - Trunk ports configured for VLAN tagging, ensuring correct traffic forwarding
+  - Router-on-a-stick setup on R2, using subinterfaces for each VLAN to enable inter-VLAN routing
+  - Validation of VLAN assignments and trunk links using show vlan brief and show interfaces trunk
+  - Ping tests conducted between hosts in different VLANs to confirm successful inter-VLAN communication
+ 
+    ![Network Topology](vlan/image.png)

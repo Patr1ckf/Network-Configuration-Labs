@@ -53,14 +53,20 @@ Dynamic routing is a scalable approach that allows routers to automatically lear
    ![Network Topology](dynamic%20routing/image.png)
 
 ### 3. NAT (Network Address Translation)
-- **Objective**: Enable private-to-public IP translation for network access.
-- **Configuration Steps**:
-  - Define NAT pool and access lists for address translation.
-  - Apply NAT rules on router interfaces (`ip nat inside` and `ip nat outside`).
-  - Enable overloading for PAT (Port Address Translation).
-- **Verification**:
-  - Use `show ip nat translations` to check address mappings.
-  - Conduct `ping` tests to confirm successful translation.
+Network Address Translation (NAT) allows multiple devices in a private network to share a limited number of public IP addresses. This lab focuses on configuring Dynamic NAT with Overload (PAT) on router R1 to facilitate communication between internal hosts and an external TinyCore server.
+- **Objective:** Configure Dynamic NAT Overload (PAT) to enable multiple internal hosts, including a TinyCore VM, to access external networks and communicate with a TinyCore server (176.16.0.2).
+- **Topology:**
+  - Internal network with four hosts (192.168.1.0/28), including a TinyCore VM
+  - Router R1 performing NAT Overload, allowing private IPs to share a pool of public IPs (192.168.10.3 - 192.168.10.6)
+  - Router R2 forwarding traffic between R1 and the external TinyCore server
+  - The TinyCore server hosting a webpage and an SSH service for external access
+- **Key Features:**
+  - Implementation of Dynamic NAT Overload (PAT) to support multiple internal hosts
+  - Configuration of network connectivity between private hosts and an external server
+  - Ensuring that the TinyCore server is accessible via both SSH and HTTP
+  - Verification of successful NAT translation and external access through various connectivity tests
+ 
+    ![Network Topology](nat/image.png)
 
 ### 4. VLAN (Virtual Local Area Network)
 - **Objective**: Implement VLANs for network segmentation and isolation.

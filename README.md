@@ -21,13 +21,15 @@ The repository includes configurations for the four networking labs:
 ## Detailed Lab Descriptions
 
 ### 1. Static Routing
-- **Objective**: Configure static routing between network devices.
-- **Tools Used**: GNS3, routers, switches, virtual machines.
-- **Configuration Steps**:
-  - Define IP addressing scheme and subnetting.
-  - Assign static routes on routers using `ip route` commands.
-  - Verify connectivity using `ping` and `show ip route`.
-- **Key Concepts**: IP addressing, subnetting, static routing, inter-subnet communication.
+Static routing is the fundamental approach to network routing, where routes are manually configured on each router rather than dynamically learned. This method is commonly used in smaller networks or where precise control over traffic flow is required.
+- **Description:** This lab focuses on designing a network using static routing. The network was divided into smaller subnets to optimize communication and ensure efficient resource utilization
+- **Topology:** The network includes multiple routers, each connected via serial or FastEthernet interfaces, with hosts assigned to different subnets
+- **Key Features:**
+  - Manual route configuration using ip route commands
+  - Subnetting of 192.168.1.0/24 and 192.168.2.0/24 to allow efficient IP address allocation
+  - Integration of additional routers (R3 and R4) to manage subnet connectivity
+  - Use of switches to connect virtual hosts and TinyCore VMs
+  - End-to-end connectivity validation using ping and show ip route
   
 ![Network Topology](static%20routing/image.png)
 

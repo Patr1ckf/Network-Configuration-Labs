@@ -28,6 +28,8 @@ The repository includes configurations for the four networking labs:
   - Assign static routes on routers using `ip route` commands.
   - Verify connectivity using `ping` and `show ip route`.
 - **Key Concepts**: IP addressing, subnetting, static routing, inter-subnet communication.
+  
+![Network Topology](static%20routing/image.png)
 
 ### 2. Dynamic Routing
 - **Objective**: Implement dynamic routing protocols to ensure end-to-end connectivity.

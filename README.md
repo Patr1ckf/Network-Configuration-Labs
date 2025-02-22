@@ -13,10 +13,10 @@ Each lab includes detailed configurations, testing procedures, and verification 
 ## Repository Contents
 The repository includes configurations for the four networking labs:
 
-1. **Static Routing** – Implementation of manually defined routes between routers.
-2. **Dynamic Routing** – Configuration of RIP v2, OSPF, and BGP to enable automatic routing.
-3. **NAT** – Applying NAT techniques to allow communication between private and public networks.
-4. **VLAN** – Setting up VLANs to segment network traffic efficiently.
+1. **Static Routing** – Implementation of manually defined routes between routers
+2. **Dynamic Routing** – Configuration of RIP v2, OSPF, and BGP to enable automatic routing
+3. **NAT** – Applying NAT techniques to allow communication between private and public networks
+4. **VLAN** – Setting up VLANs to segment network traffic efficiently
 
 ## Detailed Lab Descriptions
 
